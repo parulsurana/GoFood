@@ -1,0 +1,11 @@
+.Search {
+  z-index: 10;
+}
+
+.Img {
+  filter: brightness(30%);
+}
+
+.CarouselImg {
+  object-fit: contain !important;
+}
