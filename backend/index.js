@@ -22,7 +22,8 @@ app.use(express.json());
 
 app.use(cors());
 app.use("/api", require("./routes/CreateUser.js"));
+app.use("/api", require("./routes/DisplayData"));
 
 app.listen(port, () => {
-  console.log(`Port numebr is ${port}`);
+  console.log(`Port number is ${port}`);
 });

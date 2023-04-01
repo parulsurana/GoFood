@@ -16,11 +16,17 @@ const mongoDB = async () => {
         const fetched_data = await mongoose.connection.db.collection(
           "food_items"
         );
-        fetched_data.find({}).toArray((err, data) => {
-          if (err) console.log(err);
-          else {
-            console.log();
-          }
+        fetched_data.find({}).toArray(async (err, data) => {
+          const foodCategory = await mongoose.connection.db.collection(
+            "foodCategory"
+          );
+          foodCategory.find({}).toArray((err, catData) => {
+            if (err) console.log(err);
+            else {
+              global.food_items = data;
+              global.foodCategory = catData;
+            }
+          });
         });
       }
     }
