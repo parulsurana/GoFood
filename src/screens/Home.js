@@ -139,9 +139,8 @@ export default function Home() {
                         >
                           {" "}
                           <Card
-                            foodName={filterItems.name}
+                            foodItem={filterItems}
                             options={filterItems.options[0]}
-                            imgSrc={filterItems.img}
                           ></Card>{" "}
                         </div>
                       );
